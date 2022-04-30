@@ -1,6 +1,7 @@
 # Anime Quotes
 
-This is a React Web Application that displays quotes from anime using the AnimeChan API
+This is a React Web Application that displays quotes from anime using the AnimeChan API\
+For Live Demo : misemo.netlify.app
 
 ## Functionality
 
