@@ -1,4 +1,7 @@
 import React,{useState,useEffect} from 'react';
+import { Pivot, PivotItem } from '@fluentui/react';
+import TenQuotes from './TenQuotes';
+import AvailableAnime from './AvailableAnime';
 
 const Quote = () => {
     const [quote,setQuote] = useState({
@@ -25,7 +28,8 @@ const Quote = () => {
     }, [])
     
   return (
-      <div>
+      <Pivot aria-label='Quotes'>
+        <PivotItem headerText='Random Quotes'>
     <div className='quote'>
        <div className='anime' title={quote.anime}>
             {quote.anime}
@@ -37,7 +41,14 @@ const Quote = () => {
     
     </div>
     <button onClick={generate}>Generate new Quote</button>
-    </div>
+    </PivotItem>
+    <PivotItem headerText='Ten Random Quotes'>
+      <TenQuotes />
+      </PivotItem>
+      <PivotItem headerText='Available Anime'>
+      <AvailableAnime />
+      </PivotItem>
+    </Pivot>
   )
 }
 
