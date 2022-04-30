@@ -2,6 +2,8 @@ import React,{useState,useEffect} from 'react';
 import { Pivot, PivotItem } from '@fluentui/react';
 import TenQuotes from './TenQuotes';
 import AvailableAnime from './AvailableAnime';
+import GetByAnime from './GetByAnime';
+import GetByChar from './GetByChar';
 
 const Quote = () => {
     const [quote,setQuote] = useState({
@@ -47,6 +49,12 @@ const Quote = () => {
       </PivotItem>
       <PivotItem headerText='Available Anime'>
       <AvailableAnime />
+      </PivotItem>
+      <PivotItem headerText='Get By Anime'>
+        <GetByAnime />
+      </PivotItem>
+      <PivotItem headerText='Get By Character'>
+        <GetByChar />
       </PivotItem>
     </Pivot>
   )
